@@ -47,16 +47,16 @@
                                $Categories = DB::table('categories')->get();
                             ?>
                              @foreach ($Categories as $categores)
-                            <p><a href="{{url('/')}}/research/{{$categores->slung}}" class="text-reset">{{$categores->title}}</a></p>
+                            <p><a href="{{url('/')}}/researches/{{$categores->slung}}" class="text-reset">{{$categores->title}}</a></p>
                             @endforeach
                         </div>
                         <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
                             <!-- Links -->
-                            <h6 class="mb-3 crypt-grayscale-300">Buy</h6>
-                            <p><a href="#!" class="text-reset">Buy Bitcoin</a></p>
-                            <p><a href="#!" class="text-reset">Buy Ethereum</a></p>
-                            <p><a href="#!" class="text-reset">Buy USDT</a></p>
-                            <p><a href="#!" class="text-reset">Buy Cardano</a></p>
+                            <h6 class="mb-3 crypt-grayscale-300">Leagalities</h6>
+                            <p><a href="#!" class="text-reset">Terms and Conditions</a></p>
+                            <p><a href="#!" class="text-reset">Privacy Policies</a></p>
+                            <p><a href="#!" class="text-reset">Risk Policies</a></p>
+                            <p><a href="#!" class="text-reset">Copyright Statements</a></p>
                         </div>
                         <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
                             <!-- Links -->
