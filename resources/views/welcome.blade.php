@@ -9,154 +9,21 @@
     <link rel="stylesheet" href="{{asset('theme/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/button.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/gsap.css')}}">
-    <link rel="icon" type="image/svg" href="images/favicon.svg')}}">
+    <link rel="icon" type="image/svg" href="{{asset('theme/images/favicon.svg')}}">
 </head>
-<body class="crypt-dark section-dark">
+<body class="crypt-dark">
 
     <!-- Hero/Header -->
-    <section class="container-fluid temp5-bg">
+    <section class="container-fluid">
         <!-- Header -->
-        @include('front.header')
+        @include('front.headers')
         <!-- Offcanvas Navbar -->
-        <nav class="navbar py-0 navbar-dark bg-dark">
-            <div class="container-fluid">
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar">
-                    <!-- Header -->
-                    <div class="offcanvas-header card-line">
-                        <h5 class="d-flex align-items-center gap-3 crypt-grayscale-100 mb-0">D.Y.O.R</h5>
-                        <button type="button" class="btn-close text-reset close-notify align-items-center justify-content-center" data-bs-dismiss="offcanvas" aria-label="Close">
-                            <svg class="close-notify" width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.5 4.5L4.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M4.5 4.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <!-- Body -->
-                    <div class="offcanvas-body">
-                        <!-- Search -->
-                        <form class="d-flex" role="search">
-                            <input type="text" class="search search-input form-control form-control-lg text-sm" placeholder="Search coin">
-                        </form>
-                        <!-- Menu -->
-                        <ul class="navbar-nav justify-content-end flex-grow-1 gap-2 mt-3 pb-3">
-                            <li class="nav-item dropdown crypto-has-dropdown">
-                                <a class="nav-link" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Podcasts
-                                    <svg class="fright mt-1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewbox="0 0 29 29" xml:space="preserve">
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m20.5 11.5-6 6-6-6"></path>
-                                    </svg>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark g-2">
-                                    <li><a class="dropdown-item" href="template-1.html"><span class=""></span> Template 1</a></li>
-                                    <li><a class="dropdown-item" href="template-2.html">Template 2</a></li>
-                                    <li><a class="dropdown-item" href="template-3.html">Template 3</a></li>
-                                    <li><a class="dropdown-item" href="template-4.html">Template 4</a></li>
-                                    <li><a class="dropdown-item" href="template-5.html">Template 5</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown crypto-has-dropdown">
-                                <a class="nav-link" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    News & Analysis
-                                    <svg class="fright mt-1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewbox="0 0 29 29" xml:space="preserve">
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m20.5 11.5-6 6-6-6"></path>
-                                    </svg>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="dashboard-1.html">Dashboard 1</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero -->
-        <div class="container-fluid hero-wrapper align-items-center animation-element">
-            <div class="row">
-                <canvas id="particleCanvas"></canvas>
-                <div class="object-circle disable-sm-screen z-0">
-                    <img class="infinite-rotate" src="{{asset('theme/images/slider/circle-1.png')}}" alt="">
-                </div>
-                <div class="bs5-hero text-center mt-5 pt-5 pb-5 z-1">
-
-                    <h1 class="crypt-grayscale-100">
-                         Unpacking the
-                        <span class="text-span-orange text-dark mt-4"> Latest</span>
-                    </h1>
-
-                    <h1 class="gd-text">Trends in Cryptocurrency</h1>
-                    <p class="fs-5 crypt-grayscale-300 mt-4 width-500">Discovered latest top-notch stories from world wide community, quality informative podcast and verified creators.</p>
-                    <div class="d-sm-flex justify-content-center gap-3 pt-5">
-                        <a href="#" class="btn btn-primary btn-lg text-dark mb-3"><span>Explore</span>
-                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 7L13.5 15.5L8.5 10.5L2 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M16 7H22V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <button class="btn btn-secondary btn-lg btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Start Listening</button>
-                    </div>
-                </div>
-                <div class="d-flex flex-row justify-content-center gap-5">
-                    <div class="meta">
-                        <h4 class="crypt-blue-200">10+</h4>
-                        <p class="mt-2">Crypto Articles</p>
-                    </div>
-                    <div class="meta">
-                        <h4 class="crypt-blue-200">26</h4>
-                        <p class="mt-2">Guides</p>
-                    </div>
-                    <div class="meta">
-                        <h4 class="crypt-blue-200">15</h4>
-                        <p class="mt-2">Podcasts</p>
-                    </div>
-                </div>
-            </div>
-            <!-- TradingView Ticker -->
-            <div class="mt-5 pb-2 animation-element">
-                <div class="tradingview-widget-container__widget">
-                    <script src="{{asset('theme/external-embedding/embed-widget-ticker-tape.js')}}" async="">
-                       {
-                           "symbols": [
-                               {
-                                   "proName": "FOREXCOM:SPXUSD",
-                                   "title": "S&P 500 Index"
-                               },
-                               {
-                                   "proName": "FOREXCOM:NSXUSD",
-                                   "title": "US 100 Cash CFD"
-                               },
-                               {
-                                   "proName": "FX_IDC:EURUSD",
-                                   "title": "EUR to USD"
-                               },
-                               {
-                                   "proName": "BITSTAMP:BTCUSD",
-                                   "title": "Bitcoin"
-                               },
-                               {
-                                   "proName": "BITSTAMP:ETHUSD",
-                                   "title": "Ethereum"
-                               }
-                           ],
-                           "showSymbolLogo": true,
-                           "isTransparent": true,
-                           "displayMode": "adaptive",
-                           "colorTheme": "dark",
-                           "locale": "en"
-                       }
-                    </script>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Features -->
 
     <!-- Main Content -->
     <section class="container-fluid animation-element hero-wrapper pt-5">
-        <div class="container mt-5">
+        {{-- <div class="container mt-5">
             <div class="row mt-4">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-6 mb-4">
                     <a href="blog-single.html" class="blog-card bg-gradient">
@@ -254,77 +121,31 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="container mt-2">
             <h4 class="fw-bold">🌈 Top Stories</h4>
             <div class="row mt-4">
+                {{-- Iterations --}}
+                <?php
+                  $Trending = DB::table('blogs')->orderBy('id','DESC')->limit(3)->get();
+                ?>
+                @foreach ($Trending as $trend)
                 <div class="col-12 col-md-4 mb-4">
-                    <a href="blog-single.html" class="blog-card">
-                        <div class="thumb" style="background-image: url('{{asset('theme/images/blog/blog-12.jpg')}}');"></div>
+                    <a href="{{url('/')}}/research/{{$trend->slung}}" class="blog-card">
+                        <div class="thumb" style="background-image: url('{{$trend->image_one}}');"></div>
                         <div class="meta p-3">
-                            <span class="badge badge text-uppercase text-bg-success">Metaverse</span>
-                            <h5 class="title-link">FOMC holds rates steady, Bitcoin and Ethereum price decline</h5>
-                            <p class="crypt-grayscale-600">2 mins read / updated on Tue Dec 29 2024</p>
+                            <span class="badge badge text-uppercase text-bg-success">{{$trend->type}}</span>
+                            <h5 class="title-link min-h90">{{$trend->title}}</h5>
+                            <p class="crypt-grayscale-600"><?php  echo estimateReadingTime($trend->content);  ?> / updated on {{date('D M d Y', strtotime($trend->updated_at))}}</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <a href="blog-single.html" class="blog-card">
-                        <div class="thumb" style="background-image: url('{{asset('theme/images/blog/blog-13.jpg')}}');"></div>
-                        <div class="meta p-3">
-                            <span class="badge badge text-uppercase text-bg-info">Ethereum</span>
-                            <h5 class="title-link">Restaking with ETHx | Boosted reward programs</h5>
-                            <p class="crypt-grayscale-600">4 mins read / updated on Fri Oct 15 2024</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <a href="blog-single.html" class="blog-card">
-                        <div class="thumb" style="background-image: url('{{asset('theme/images/blog/blog-14.jpg')}}');"></div>
-                        <div class="meta p-3">
-                            <span class="badge badge text-uppercase text-bg-warning">Trading</span>
-                            <h5 class="title-link">Wrapping tokens enables broader across the Web3 ecosystem</h5>
-                            <p class="crypt-grayscale-600">5 mins read / updated on Sat May 22 2024</p>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-    <section class="container animation-element mt-2">
-        <h4 class="fw-bold">🌈 Trending News</h4>
-        <div class="row mt-4">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
-                <a href="blog-single.html" class="blog-card">
-                  <div class="thumb" style="background-image: url('{{asset('theme/images/blog/blog-3.jpg')}}');"></div>
-                  <div class="article">
-                        <span class="badge text-bg-light">Cryptocurrency</span>
-                        <h5 class="title-link">Grayscale XRP Trust Surges 11.44% One Week After Launch</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
-                <a href="blog-single.html" class="blog-card">
-                  <div class="thumb" style="background-image: url('{{asset('theme/images/blog/blog-6.jpg')}}');"></div>
-                  <div class="article">
-                        <span class="badge text-bg-light">Cryptocurrency</span>
-                        <h5 class="title-link">Why Bitcoin and Ethereum prices dropped the Cryptocurrency</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
-                <a href="blog-single.html" class="blog-card">
-                  <div class="thumb" style="background-image: url('{{asset('theme/images/blog/blog-5.jpg')}}');"></div>
-                  <div class="article">
-                        <span class="badge text-bg-light">Tradingview</span>
-                        <h5 class="title-link">How to leverage Tradingview charts for successful trading</h5>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- Crypto highlights -->
-    <section class="container animation-element mt-5 pb-4 g-2">
+     <!-- Crypto highlights -->
+     <section class="container animation-element mt-5 pb-4 g-2">
         <div class="d-flex justify-content-between align-items-center">
             <h3>🌈 Crypto highlights</h3>
             <div class="col-auto">
@@ -507,6 +328,57 @@
             </div>
         </div>
     </section>
+    <?php
+        $Category = DB::table('categories')->get();
+    ?>
+
+    @foreach ($Category as $category)
+    <?php
+       $Blog = DB::table('blogs')->where('category',$category->id)->orderby('id','ASC')->limit('3')->get();
+    ?>
+        @if($Blog->isEmpty())
+
+        @else
+        <section class="container animation-element mt-2">
+            <h4 class="fw-bold">🌈 {{$category->title}}</h4>
+            <div class="row mt-4">
+                @foreach ($Blog as $single)
+                @if($single->type == "Videos")
+                <div class="col-12 col-md-4 mb-4">
+                    <a href="{{url('/')}}/research/{{$single->slung}}" class="blog-card">
+                            <iframe class="yt-frame thumbs" id="player" type="text/html"
+                                src="http://www.youtube.com/embed/{{$single->whitepaper_link}}"
+                                frameborder="0">
+                            </iframe>
+
+                        <div class="meta p-3">
+                            <span class="badge badge text-uppercase text-bg-success">{{$single->type}}</span>
+                            <h5 class="title-link min-h90">{{$single->title}}</h5>
+                            <p class="crypt-grayscale-600">
+                                <?php  echo estimateReadingTime($single->content);  ?> / updated on {{date('D M d Y', strtotime($single->updated_at))}}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                @else
+                <div class="col-12 col-md-4 mb-4">
+                    <a href="{{url('/')}}/research/{{$single->slung}}" class="blog-card">
+                        <div class="thumb" style="background-image: url('{{$single->image_one}}');"></div>
+                        <div class="meta p-3">
+                            <span class="badge badge text-uppercase text-bg-success">{{$single->type}}</span>
+                            <h5 class="title-link min-h90">{{$single->title}}</h5>
+                            <p class="crypt-grayscale-600"><?php  echo estimateReadingTime($single->content);  ?> / updated on {{date('D M d Y', strtotime($single->updated_at))}}</p>
+                        </div>
+                    </a>
+                </div>
+                @endif
+                @endforeach
+            </div>
+        </section>
+        @endif
+    @endforeach
+
+
 
     <!-- Instant swap -->
     <section class="container animation-element mt-5 pt-4">
@@ -537,117 +409,11 @@
     </section>
     <!-- See your crypto -->
 
-    <!-- Offcanvas Notifications -->
-    <div class="offcanvas offcanvas-end" tabindex="0" id="offcanvasNotify">
-        <div class="offcanvas-header card-line">
-            <h5 class="d-flex align-items-center gap-3 crypt-grayscale-100 mb-0">Notifications <span class="crypt-grayscale-500 text-sm mb-0">3</span></h5>
-            <button type="button" class="btn-close text-reset close-notify align-items-center justify-content-center" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg class="close-notify" width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.5 4.5L4.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M4.5 4.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="offcanvas-body">
-            <h6 class="crypt-grayscale-400">Today</h6>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <p class="crypt-grayscale-600 text-sm mb-0">30 min ago</p>
-                <a class="text-dark fs-6 fw-bold text-link" href="#!">🔐 Account Login</a>
-                <p class="mt-2"><strong>Hollo Frank! </strong>You have logged in your account from Windows Chrome 130.</p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                <p class="crypt-grayscale-600 text-sm mb-0">1 hours ago</p>
-                <a class="text-dark fs-6 fw-bold text-link" href="#!">📢 Podcast Starting in 30Mins</a>
-                <p class="mt-2">We are starting our podcast in the next like 30 minutes, Stay tuned ama ukwende na huko.</p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                <p class="crypt-grayscale-600 text-sm mb-0">2 hours ago</p>
-                <a class="text-dark fs-6 fw-bold text-link" href="#!">🔖 Some Notification</a>
-                <p class="mt-2"><strong>Hollo Frank!</strong> Your Ideas are great!! Now i am running out of things to write</p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        </div>
-    </div>
+    @include('front.class')
 
 
     <!-- Footer -->
-    <footer class="container-fluid text-left text-lg-start crypt-footer mt-5 animation-element">
-        <div class="container mt-5 in-view">
-            <div class="row mt-5 pt-3">
-                <div class="col-12 col-sm-12 col-lg-4 pb-5">
-                    <!-- Content -->
-                    <div class="mb-4">
-                        <!-- Logo -->
-                        <div class="crypt-logo dark">
-                            <h3>D.Y.O.R</h3>
-                        </div>
-                        <div class="crypt-logo light">
-                            <h3>D.Y.O.R</h3>
-                        </div>
-                        <p class="card-text mt-2">
-                            Discover the latest top-notch stories from a worldwide community, featuring quality, informative podcasts and content from verified and trusted creato
-                        </p>
-                    </div>
-                    <div class="text-left social-icons mt-4">
-                        <a href="" rel="nofollow" target="_blank">
-                            <img src="{{asset('theme/images/social/x.svg')}}" alt="" width="24">
-                        </a>
-                        <a href="" rel="nofollow" target="_blank">
-                            <img src="{{asset('theme/images/social/facebook.svg')}}" alt="" width="24">
-                        </a>
-                        <a href="" rel="nofollow" target="_blank">
-                            <img src="{{asset('theme/images/social/instagram.svg')}}" alt="" width="24">
-                        </a>
-                        <a href="" rel="nofollow" target="_blank">
-                            <img src="{{asset('theme/images/social/tiktok.svg')}}" alt="" width="24">
-                        </a>
-                    </div>
-                </div>
-                 <div class="col-12 col-sm-12 col-lg-8">
-                    <div class="row">
-                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
-                            <!-- Links -->
-                            <h6 class="mb-3 crypt-grayscale-300">Products</h6>
-                            <p><a href="#!" class="text-reset">Supercharts</a></p>
-                            <p><a href="#!" class="text-reset">Stock market</a></p>
-                            <p><a href="#!" class="text-reset">Forex screener</a></p>
-                            <p><a href="#!" class="text-reset">Crypto market</a></p>
-                        </div>
-                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
-                            <!-- Links -->
-                            <h6 class="mb-3 crypt-grayscale-300">For Business</h6>
-                            <p><a href="#!" class="text-reset">Widgets</a></p>
-                            <p><a href="#!" class="text-reset">Advertising</a></p>
-                            <p><a href="#!" class="text-reset">Script libraries</a></p>
-                            <p><a href="#!" class="text-reset">Lightweight Charts™</a></p>
-                        </div>
-                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
-                            <!-- Links -->
-                            <h6 class="mb-3 crypt-grayscale-300">Buy</h6>
-                            <p><a href="#!" class="text-reset">Buy Bitcoin</a></p>
-                            <p><a href="#!" class="text-reset">Buy Ethereum</a></p>
-                            <p><a href="#!" class="text-reset">Buy USDT</a></p>
-                            <p><a href="#!" class="text-reset">Buy Cardano</a></p>
-                        </div>
-                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
-                            <!-- Links -->
-                            <h6 class="mb-3 crypt-grayscale-300">Community</h6>
-                            <p><a href="#!" class="text-reset">Refer a friend</a></p>
-                            <p><a href="#!" class="text-reset">Scripts</a></p>
-                            <p><a href="#!" class="text-reset">Moderators</a></p>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-             <!-- Copyright -->
-             <div class="text-center p-4 mt-4 crypt-footer-copyright">
-                Copyright © {{date('Y')}} - Powered by <a class="fw-bold link" href="https://designekta.com" rel="nofollow" target="_blank">Designekta Studios</a>
-            </div>
-        </div>
-
-    </footer>
+    @include('front.footer')
 
     <!-- Main Content End -->
     <script src="{{asset('theme/ajax/libs/jquery/3.7.1/jquery.min.js')}}"></script>

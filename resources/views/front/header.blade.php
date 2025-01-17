@@ -5,44 +5,31 @@
  <!-- Header -->
  <header class="header-boxed border-bottom-0  mt-2">
     <div class="d-flex flex-row justify-content-between align-items-center">
-          <!-- Logo -->
-          <div class="crypt-logo dark">
-                <a class="crypt-link" href="{{url('/')}}">
-                    <h3>D.Y.O.R</h3>
-                </a>
-            </div>
-            <div class="{{url('/')}}">
-                <a class="crypt-link" href="#">
-                    <h3>D.Y.O.R</h3>
-                </a>
-            </div>
+        <!-- Logo -->
+        <div class="crypt-logo dark">
+            <a class="crypt-link" href="{{url('/')}}">
+                <h3>D.Y.O.R</h3>
+            </a>
+        </div>
+        <div class="crypt-logo light">
+            <a class="crypt-link" href="{{url('/')}}">
+                <h3>D.Y.O.R</h3>
+            </a>
+        </div>
         <!-- Menu item -->
         <div class="transparent-menu-bg flex hidesmscreen in-view">
             <div class="d-flex align-items-center gap-4">
                 <ul class="d-flex gap-4 align-items-center px-0 p-1 m-0">
                     <!-- Dropdown (Landing Page) -->
                     <li class="dropdown nav-item profile_menu">
-                        <a class="nav-link crypto-has-dropdown fw-medium" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link fw-medium" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Podcasts
-
                         </a>
-                        <ul class="profile_menu dropdown-menu dropdown-menu-shows">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    @include('front.icon')
-                                    Sample 1
-                                </a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sample 2</a></li>
-                            <li><a class="dropdown-item" href="#">Sample 3</a></li>
-                            <li><a class="dropdown-item" href="#">Sample 4</a></li>
-                            <li><a class="dropdown-item" href="#">Sample 5</a></li>
-                        </ul>
                     </li>
                     <!-- Dropdown (Exchange) -->
                     <li class="nav-item dropdown profile_menu">
                         <a class="nav-link crypto-has-dropdown fw-medium" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            News & Analysis
+                            Articles & Guides
 
                         </a>
                         <ul class="profile_menu dropdown-menu dropdown-menu-shows">
@@ -61,8 +48,7 @@
                     <!-- Dropdown (Markets) -->
                     <li class="nav-item dropdown profile_menu">
                         <a class="nav-link crypto-has-dropdown fw-medium" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Newsletter
-
+                            Airdrops & Claimables
                         </a>
                         <ul class="profile_menu dropdown-menu dropdown-menu-shows">
                             <li>
@@ -80,7 +66,7 @@
                     <!-- Dropdown (Blog) -->
                     <li class="nav-item dropdown profile_menu">
                         <a class="nav-link crypto-has-dropdown fw-medium" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Airdrops and Tools
+                            AI Agents
 
                         </a>
                         <ul class="profile_menu dropdown-menu dropdown-menu-shows">
@@ -99,22 +85,11 @@
 
                     <!-- Dropdown (Blog) -->
                     <li class="nav-item dropdown profile_menu">
-                        <a class="nav-link crypto-has-dropdown fw-medium" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            AI Agent
+                        <a class="nav-link fw-medium" href="#!">
+                            IRL Meetups
 
                         </a>
-                        <ul class="profile_menu dropdown-menu dropdown-menu-shows">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    @include('front.icon')
-                                    Sample 1
-                                </a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sample 2</a></li>
-                            <li><a class="dropdown-item" href="#">Sample 3</a></li>
-                            <li><a class="dropdown-item" href="#">Sample 4</a></li>
-                            <li><a class="dropdown-item" href="#">Sample 5</a></li>
-                        </ul>
+
                     </li>
                 </ul>
 
@@ -129,7 +104,7 @@
                 </div>
 
                 <div class="flex hide-mobile">
-                    <a class="btn btn-lg shiny-cta signup-btn" href="#!"><img src="{{asset('theme/images/icon/checkmark.svg')}}" alt="" width="24"> Join DYOR</a>
+                    <a class="btn btn-lg shiny-cta signup-btn" href="https://t.me/+kadh0UzDy1o3N2Vk"><img src="{{asset('theme/images/icon/checkmark.svg')}}" alt="" width="24"> Join DYOR</a>
                 </div>
 
                 <!-- Notification -->
