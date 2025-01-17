@@ -80,27 +80,31 @@
                     <div class="row p-3 card-bs bg-gradient">
                         <h4>Related Reads</h4>
                         <?php
-                            $Related = DB::table('blogs')->where('id', $single->category)->get();
+                            $Related = DB::table('blogs')->where('category', $single->category)->get();
                         ?>
                         @foreach ($Related as $related)
-                        <div class="d-flex flex-row blog-card-divider align-items-center gap-4 mt-4">
-                            <div class="blog-card-content">
-                                <div class="d-flex flex-row gap-2 align-items-center">
-                                    <div class="tag">
-                                        <span class="badge text-bg-light">{{$related->type}}</span>
+                            @if($related->id == $single->id)
+
+                            @else
+                            <div class="d-flex flex-row blog-card-divider align-items-center gap-4 mt-4">
+                                <div class="blog-card-content">
+                                    <div class="d-flex flex-row gap-2 align-items-center">
+                                        <div class="tag">
+                                            <span class="badge text-bg-light">{{$related->type}}</span>
+                                        </div>
+                                    </div>
+                                    <a href="{{url('/')}}/research/{{$related->slung}}"><h5 class="title-link">{{$related->title}}</h5></a>
+                                    <p>
+                                        {!!html_entity_decode($single->meta)!!}
+                                    </p>
+                                    <div class="meta">
+                                        <p>
+                                            {{date('D M d Y', strtotime($related->updated_at))}}
+                                        </p>
                                     </div>
                                 </div>
-                                <a href="{{url('/')}}/research/{{$related->slung}}"><h5 class="title-link">{{$related->title}}</h5></a>
-                                <p>
-                                    {!!html_entity_decode($single->meta)!!}
-                                </p>
-                                <div class="meta">
-                                    <p>
-                                        {{date('D M d Y', strtotime($related->updated_at))}}
-                                    </p>
-                                </div>
                             </div>
-                        </div>
+                        @endif
                         @endforeach
                     </div>
                 </div>

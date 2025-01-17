@@ -20,7 +20,7 @@
                             <img alt="{{$pods->title}}" src="{{$pods->image_one}}">
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-5 sec-title-parent">
-                                <a href="" class="sec-title">{{$pods->title}}</a>
+                                <a href="{{url('/')}}/research/{{$pods->slung}}" class="sec-title">{{$pods->title}}</a>
                                 <p class="crypt-grayscale-600 sec-meta"><?php  echo estimateReadingTime($single->content);  ?> . <?php echo timeAgo($pods->created_at) ?></span>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                          <img alt="{{$pods->title}}" src="{{$pods->image_one}}">
                      </div>
                      <div class="col-12 col-sm-12 col-md-12 col-lg-5 sec-title-parent">
-                             <a href="" class="sec-title">{{$pods->title}}</a>
+                             <a href="{{url('/')}}/research/{{$pods->slung}}" class="sec-title">{{$pods->title}}</a>
                              <p class="crypt-grayscale-600 sec-meta"><?php  echo estimateReadingTime($single->content);  ?> . <?php echo timeAgo($pods->created_at) ?></span>
                      </div>
                  </div>
@@ -64,7 +64,7 @@
                          <img alt="{{$pods->title}}" src="{{$pods->image_one}}">
                      </div>
                      <div class="col-12 col-sm-12 col-md-12 col-lg-5 sec-title-parent">
-                             <a href="" class="sec-title">{{$pods->title}}</a>
+                             <a href="{{url('/')}}/research/{{$pods->slung}}" class="sec-title">{{$pods->title}}</a>
                              <p class="crypt-grayscale-600 sec-meta"><?php  echo estimateReadingTime($single->content);  ?> . <?php echo timeAgo($pods->created_at) ?></span>
                      </div>
                  </div>
