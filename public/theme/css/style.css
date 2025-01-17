@@ -11,12 +11,12 @@ Licence: Commons Creative
 
 ----------------------------------------------------*/
 @import url("../font-awesome/4.3.0/css/font-awesome.min.css");
-@import url('../../css2');
-@import url("../../css2-1");
-@import url("../../css2-2");
-@import url("../../css2-3");
-@import url("../../css2-4");
-@import url("../../css2-5");
+@import url('../css2');
+@import url("../css2-1");
+@import url("../css2-2");
+@import url("../css2-3");
+@import url("../css2-4");
+@import url("../css2-5");
 
 :root {
     --delay: 0s;
