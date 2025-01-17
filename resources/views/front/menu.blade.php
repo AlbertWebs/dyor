@@ -17,7 +17,7 @@ $Categories = DB::table('categories')->get();
 
     <!-- Dropdown (Blog) -->
     <li class="nav-item dropdown profile_menu">
-        <a class="nav-link fw-medium" href="#!">
+        <a class="nav-link fw-medium" href="{{url('/')}}/irl-meetups">
             IRL Meetups
 
         </a>

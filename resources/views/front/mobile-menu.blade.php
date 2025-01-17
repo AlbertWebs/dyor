@@ -35,7 +35,7 @@
 
                             <!-- Dropdown (Blog) -->
                             <li class="dropdown nav-item">
-                                <a class="nav-link fw-medium" href="#!">
+                                <a class="nav-link fw-medium" href="{{url('/')}}/irl-meetups">
                                     IRL Meetups
                                 </a>
                             </li>

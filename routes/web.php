@@ -10,6 +10,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/research/{slung}', [HomeController::class, 'research'])->name('web.research');
+Route::get('/irl-meetups', [HomeController::class, 'meetups'])->name('irl.meetups');
+
 Route::get('/researches/{slung}', [HomeController::class, 'researches'])->name('web.researches');
 Route::post('product/img', [HomeController::class, 'uploadMedia'])->name('admin.product.uploadMedia');
 

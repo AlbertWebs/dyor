@@ -17,6 +17,8 @@ class HomeController extends Controller
         return view('welcome');
     }
 
+
+
     public function research($slung)
     {
         $Single = DB::table('blogs')->where('slung', $slung)->get();
