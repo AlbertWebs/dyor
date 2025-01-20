@@ -73,7 +73,7 @@
                             engaging articles, and content from verified creators who bring unique perspectives and valuable insights
                         </p>
                         <div class="d-sm-flex mt-4">
-                            <a href="{{url('/')}}/podcasts" class="btn btn-light btn-lg rounded-pill mb-3 me-2">
+                            <a href="{{url('/')}}/researches/podcasts" class="btn btn-light btn-lg rounded-pill mb-3 me-2">
                                 Podcasts
                             </a>
                             <a target="new" href="https://t.me/+kadh0UzDy1o3N2Vk" class="btn btn-primary btn-lg btn-gradient text-white rounded-pill mb-3">
