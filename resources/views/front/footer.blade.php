@@ -53,10 +53,10 @@
                         <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
                             <!-- Links -->
                             <h6 class="mb-3 crypt-grayscale-300">Leagalities</h6>
-                            <p><a href="#!" class="text-reset">Terms and Conditions</a></p>
-                            <p><a href="#!" class="text-reset">Privacy Policies</a></p>
-                            <p><a href="#!" class="text-reset">Risk Policies</a></p>
-                            <p><a href="#!" class="text-reset">Copyright Statements</a></p>
+                            <p><a href="{{url('/')}}/terms-and-conditions" class="text-reset">Terms and Conditions</a></p>
+                            <p><a href="{{url('/')}}/privacy-policy" class="text-reset">Privacy Policies</a></p>
+                            <p><a href="{{url('/')}}/risk-policy" class="text-reset">Risk Policies</a></p>
+                            {{-- <p><a href="#!" class="text-reset">Copyright Statements</a></p> --}}
                         </div>
                         <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
                             <!-- Links -->

@@ -68,15 +68,18 @@
                 IRL Meetups
             </h4>
             <div class="row mt-4">
+                {{-- Iterate this --}}
+                @foreach ($Meetups as $meetups)
                 <div class="col-12 col-md-4 mb-4">
-                    <a href="blog-single.html" class="blog-card">
-                        <div class="thumb" style="background-image: url('{{asset('theme/images/blog/blog-13.jpg')}}');"></div>
+                    <a href="{{url('/')}}/irl-meetups/{{$meetups->slung}}" class="blog-card">
+                        <div class="thumb" style="background-image: url('{{$meetups->image_one}}');"></div>
                         <div class="meta p-3">
-                            <h5 class="title-link">Restaking with ETHx | Boosted reward programs</h5>
-                            <p class="crypt-grayscale-600">4 mins read / updated on Fri Oct 15 2024</p>
+                            <h5 class="title-link">{{$meetups->title}}</h5>
                         </div>
                     </a>
                 </div>
+                @endforeach
+
             </div>
         </div>
     </section>

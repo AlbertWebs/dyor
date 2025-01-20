@@ -42,12 +42,41 @@ class HomeController extends Controller
         return view('podcasts');
     }
 
+    public function privacy()
+    {
+        return view('privacy');
+    }
+
+    public function terms()
+    {
+        return view('terms');
+    }
+
+    public function risk()
+    {
+        return view('risk');
+    }
+
+    public function copyright()
+    {
+        return view('copyright');
+    }
+
 
 
     public function meetups()
     {
-        return view('irl');
+        $Meetups = DB::table('meetups')->get();
+        return view('irl', compact('Meetups'));
     }
+
+    public function meetup($slung)
+    {
+        $Single = DB::table('meetups')->where('slung',$slung)->get();
+        return view('irl-single', compact('Single'));
+    }
+
+
 }
 
 

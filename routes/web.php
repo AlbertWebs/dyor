@@ -1,25 +1,37 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminsController;
 use App\Http\Controllers\HomeController;
-
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\DropzoneController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/research/{slung}', [HomeController::class, 'research'])->name('web.research');
 Route::get('/irl-meetups', [HomeController::class, 'meetups'])->name('irl.meetups');
+Route::get('/irl-meetups/{slung}', [HomeController::class, 'meetup'])->name('irl.meetup');
+
 
 Route::get('/researches/{slung}', [HomeController::class, 'researches'])->name('web.researches');
 Route::post('product/img', [HomeController::class, 'uploadMedia'])->name('admin.product.uploadMedia');
 
+Route::get('/privacy-policy', [HomeController::class, 'privacy'])->name('privacy-policy');
+Route::get('/terms-and-conditions', [HomeController::class, 'terms'])->name('terms-and-conditions');
+Route::get('/risk-policy', [HomeController::class, 'risk'])->name('risk-policy');
+Route::get('/copyright-statement', [HomeController::class, 'copyright'])->name('copyright-statement');
 
 Route::get('/dashboard', function () {
     return view('admin.index');
 });
 
+
+
+
+Route::get('dropzone', [DropzoneController::class, 'index']);
+Route::post('dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
 
 
 
@@ -264,6 +276,16 @@ Route::middleware('auth')->group(function () {
         Route::get('editBlog/{id}', [AdminsController::class, 'editBlog']);
         Route::post('edit_Blog/{id}', [AdminsController::class, 'edit_Blog']);
         Route::get('delete_Blog/{id}', [AdminsController::class, 'delete_Blog']);
+
+        // IRL Meetups
+        Route::get('meetup', [AdminsController::class, 'meetup']);
+        Route::get('addMeetup', [AdminsController::class, 'addMeetup']);
+        Route::post('add_Meetup', [AdminsController::class, 'add_Meetup']);
+        Route::get('editMeetup/{id}', [AdminsController::class, 'editMeetup']);
+        Route::post('edit_Meetup/{id}', [AdminsController::class, 'edit_Meetup']);
+        Route::get('delete_Meetup/{id}', [AdminsController::class, 'delete_Meetup']);
+
+
 
         // Blog
         Route::get('advertisements', [AdminsController::class, 'advertisements']);

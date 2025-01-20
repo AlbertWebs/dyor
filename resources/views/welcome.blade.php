@@ -130,16 +130,36 @@
                   $Trending = DB::table('blogs')->orderBy('id','DESC')->limit(3)->get();
                 ?>
                 @foreach ($Trending as $trend)
+                @if($trend->type == "Videos")
+                <div class="col-12 col-md-4 mb-4">
+                    <a href="{{url('/')}}/research/{{$trend->slung}}" class="blog-card">
+                            <iframe class="yt-frame thumbs" type="text/html"
+                                src="http://www.youtube.com/embed/{{$trend->whitepaper_link}}"  frameborder="0">
+                            </iframe>
+
+                        <div class="meta p-3">
+                            <span class="badge badge text-uppercase text-bg-success">{{$trend->type}}</span>
+                            <h5 class="title-link min-h90">{{$trend->title}}</h5>
+                            <p class="crypt-grayscale-600">
+                                <?php  echo estimateReadingTime($trend->content);  ?> / updated on {{date('D M d Y', strtotime($trend->updated_at))}}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                @else
                 <div class="col-12 col-md-4 mb-4">
                     <a href="{{url('/')}}/research/{{$trend->slung}}" class="blog-card">
                         <div class="thumb" style="background-image: url('{{$trend->image_one}}');"></div>
                         <div class="meta p-3">
                             <span class="badge badge text-uppercase text-bg-success">{{$trend->type}}</span>
                             <h5 class="title-link min-h90">{{$trend->title}}</h5>
-                            <p class="crypt-grayscale-600"><?php  echo estimateReadingTime($trend->content);  ?> / updated on {{date('D M d Y', strtotime($trend->updated_at))}}</p>
+                            <p class="crypt-grayscale-600">
+                                <?php  echo estimateReadingTime($trend->content);  ?> / updated on {{date('D M d Y', strtotime($trend->updated_at))}}
+                            </p>
                         </div>
                     </a>
                 </div>
+                @endif
                 @endforeach
             </div>
         </div>
@@ -346,9 +366,8 @@
                 @if($single->type == "Videos")
                 <div class="col-12 col-md-4 mb-4">
                     <a href="{{url('/')}}/research/{{$single->slung}}" class="blog-card">
-                            <iframe class="yt-frame thumbs" id="player" type="text/html"
-                                src="http://www.youtube.com/embed/{{$single->whitepaper_link}}"
-                                frameborder="0">
+                            <iframe class="yt-frame thumbs" type="text/html"
+                                src="http://www.youtube.com/embed/{{$single->whitepaper_link}}"  frameborder="0">
                             </iframe>
 
                         <div class="meta p-3">

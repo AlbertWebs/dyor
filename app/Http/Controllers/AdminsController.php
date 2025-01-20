@@ -8,7 +8,11 @@ use App\Models\Term;
 
 use App\Models\Privacy;
 
+use App\Models\Image;
+
 use App\Models\Download;
+
+use App\Models\Meetup;
 
 use App\Models\Lead;
 
@@ -3132,9 +3136,107 @@ class AdminsController extends Controller
         return $image_path;
     }
 
-    // public function uploadMedia(){
-    //     echo "here";
-    // }
+
+    public function addMeetup(){
+        activity()->log('Accessed Add Meetup Page');
+        $Category = DB::table('categories')->orderBy('id','DESC')->get();
+        $page_title = 'formfiletext';//For Layout Inheritance
+        $page_name = 'add Meetup';
+        return view('admin.addMeetup',compact('page_title','page_name','Category'));
+    }
+
+    public function add_Meetup(Request $request){
+        activity()->log('Evoked an add Meetup Operation');
+        $title = $request->title;
+        $description = $request->content;
+
+
+
+        $category = $request->cat;
+        $path = 'uploads/Meetups';
+        if(isset($request->image_one)){
+            $dir = 'uploads/Meetups';
+            $file = $request->file('image_one');
+            $realPath = $request->file('image_one')->getRealPath();
+            $SaveFilePath = $this->genericFIleUpload($file,$dir,$realPath);
+        }else{
+            $SaveFilePath = $request->pro_img_cheat;
+        }
+
+        $tranfomer = new \Stevebauman\Hypertext\Transformer;
+        $formated = $tranfomer->toText($request->ckeditor);
+        // Remove all special characters
+        $Counter = "";
+        $Meetup = new Meetup;
+        $Meetup->title = $request->title;
+        $Meetup->meta = $request->meta;
+        $Meetup->slung = Str::slug($request->title);
+        $Meetup->content = $request->ckeditor;
+        $Meetup->author = Auth::User()->id;
+        $Meetup->image_one = $SaveFilePath;
+        $Meetup->save();
+        Session::flash('message', "Meetup Has Been Added");
+        // Get the last record
+        $LastMeetup = Meetup::latest()->first();
+
+
+        $page_title = 'list';
+        $page_name = 'Meetup';
+        $images = Image::all();
+
+        return view('admin.meetupgallery',compact('page_title','LastMeetup','page_name','images'));
+    }
+
+    public function meetup(){
+        activity()->log('Accessed the all Meetups page ');
+        $Meetup = Meetup::orderBy('id','DESC')->get();
+        $page_title = 'list';
+        $page_name = 'Meetup';
+        return view('admin.meetup',compact('page_title','Meetup','page_name'));
+    }
+
+    public function editMeetup($id){
+        activity()->log('Accessed Edit Meetup For Meetup ID number '.$id.' ');
+        $Category = DB::table('categories')->orderBy('id','DESC')->get();
+        $Meetup = Meetup::find($id);
+        $page_title = 'formfiletext';
+        $page_name = 'Edit Meetup';
+        return view('admin.editMeetup',compact('page_title','Meetup','page_name','Category'));
+    }
+
+
+    public function edit_Meetup(Request $request, $id){
+        activity()->log('Evoked an Edit Meetup Operation For Meetup ID number '.$id.' ');
+        $path = 'uploads/Meetups';
+        if(isset($request->image_one)){
+            $dir = 'uploads/Meetups';
+            $file = $request->file('image_one');
+            $realPath = $request->file('image_one')->getRealPath();
+            $SaveFilePath = $this->genericFIleUpload($file,$dir,$realPath);
+        }else{
+            $SaveFilePath = $request->image_one_cheat;
+        }
+
+        $updateDetails = array(
+            'title' => $request->title,
+            'meta' => $request->meta,
+            'slung' => Str::slug($request->title),
+            'content' => $request->ckeditor,
+            'author' => Auth::user()->id,
+            'image_one' =>$SaveFilePath,
+        );
+        DB::table('meetups')->where('id',$id)->update($updateDetails);
+        Session::flash('message', "Changes have been saved Meetup :$id");
+        $CurrentMeetup = Meetup::find($id);
+        return view('admin.meetupgallery',compact('page_title','CurrentMeetup','page_name'));
+    }
+
+    public function delete_Meetup($id){
+        activity()->log('Deleted Meetup With ID number '.$id.' ');
+        DB::table('meetups')->where('id',$id)->delete();
+        Session::flash('message', "Post Deleted Successfully");
+        return Redirect::back();
+    }
 
 
 }

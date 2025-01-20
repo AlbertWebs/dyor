@@ -19,9 +19,12 @@
 
     <!--== ALL CSS FILES ==-->
     <link rel="stylesheet" href="{{asset('admin-theme/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('admin-theme/css/upload.scss')}}">
     <link rel="stylesheet" href="{{asset('admin-theme/css/mob.css')}}">
     <link rel="stylesheet" href="{{asset('admin-theme/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('admin-theme/css/materialize.css')}}" />
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

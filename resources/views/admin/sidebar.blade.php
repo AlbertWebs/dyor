@@ -41,6 +41,10 @@
                     </li>
                     <li><a href="{{url('/')}}/admin/addBlog">Add Posts</a>
                     </li>
+                    <li><a href="{{url('/')}}/admin/addMeetup">Add IRL Meetups</a>
+                    </li>
+                    <li><a href="{{url('/')}}/admin/meetup">IRL Meetups</a>
+                    </li>
                 </ul>
                 </div>
             </li>
