@@ -3,13 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>D.Y.O.R</title>
     <link rel="stylesheet" href="{{asset('theme/bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/button.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/gsap.css')}}">
     <link rel="icon" type="image/svg" href="images/favicon.svg')}}">
+
+    {{--  --}}
+    @foreach ($Single as $single)
+    <!-- Primary Meta Tags -->
+    <title>{{$single->title}} -  Do Your Own Research Podcasts Podcasts</title>
+    <meta name="description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
+    <meta name="keywords" content="{{$single->title}} <?php $Cat = DB::table('categories')->get(); ?> @foreach ($Cat as $cat)
+    {{$cat->title}}
+    @endforeach">
+    <meta name="author" content="{{$single->title}} -  Do Your Own Research Podcasts">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.doyourownresear.ch/research/{{$single->slung}}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{$single->title}} -  Do Your Own Research Podcasts">
+    <meta property="og:description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
+    <meta property="og:url" content="https://www.doyourownresear.ch/research/{{$single->slung}}">
+    <meta property="og:site_name" content="{{$single->title}} -  Do Your Own Research Podcasts">
+    <meta property="og:image" content="https://www.doyourownresear.ch/og-image.jpg"> <!-- Replace with your image URL -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{$single->title}} -  Do Your Own Research Podcasts">
+    <meta name="twitter:description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
+    <meta name="twitter:url" content="https://www.doyourownresear.ch/research/{{$single->slung}}">
+    <meta name="twitter:image" content="https://www.doyourownresear.ch/twitter-image.jpg"> <!-- Replace with your image URL -->
+    <meta name="twitter:creator" content="@DYORLabz">
+
+    <!-- Favicons -->
+    <link rel="icon" href="https://www.doyourownresear.ch/favicon.ico" type="image/x-icon"> <!-- Replace with your favicon URL -->
+    <link rel="apple-touch-icon" href="https://www.doyourownresear.ch/apple-touch-icon.png"> <!-- Replace with your icon URL -->
+
+    <!-- Social Media Links -->
+    <link rel="me" href="https://x.com/DYORLabz">
+    <link rel="me" href="https://www.youtube.com/@D.Y.O.R_Show">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{$single->title}} -  Do Your Own Research Podcasts",
+    "url": "https://www.doyourownresear.ch/research/{{$single->slung}}",
+    "description": "Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.",
+    "sameAs": [
+        "https://x.com/DYORLabz",
+        "https://www.youtube.com/@D.Y.O.R_Show"
+    ],
+    "logo": "https://www.doyourownresear.ch/logo.png",  <!-- Replace with your logo URL -->
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "support@doyourownresear.ch"
+    }
+    }
+    </script>
+    @endforeach
+    {{--  --}}
 </head>
 <body class="crypt-dark">
 

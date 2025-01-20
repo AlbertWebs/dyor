@@ -3,13 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>D.Y.O.R</title>
+
     <link rel="stylesheet" href="{{asset('theme/bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/button.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/gsap.css')}}">
-    <link rel="icon" type="image/svg" href="{{asset('theme/images/favicon.svg')}}">
+
+
+    {{--  --}}
+    <!-- Primary Meta Tags -->
+    <title>Do Your Own Research Podcasts Podcasts</title>
+    <meta name="description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
+    <meta name="keywords" content="Do Your Own Research Podcasts, DYOR, top-notch stories, podcasts, verified creators, informative content, community">
+    <meta name="author" content="Do Your Own Research Podcasts">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.doyourownresear.ch/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Do Your Own Research Podcasts">
+    <meta property="og:description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
+    <meta property="og:url" content="https://www.doyourownresear.ch/">
+    <meta property="og:site_name" content="Do Your Own Research Podcasts">
+    <meta property="og:image" content="https://www.doyourownresear.ch/og-image.jpg"> <!-- Replace with your image URL -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Do Your Own Research Podcasts">
+    <meta name="twitter:description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
+    <meta name="twitter:url" content="https://www.doyourownresear.ch/">
+    <meta name="twitter:image" content="https://www.doyourownresear.ch/twitter-image.jpg"> <!-- Replace with your image URL -->
+    <meta name="twitter:creator" content="@DYORLabz">
+
+    <!-- Favicons -->
+    <link rel="icon" href="https://www.doyourownresear.ch/favicon.ico" type="image/x-icon"> <!-- Replace with your favicon URL -->
+    <link rel="apple-touch-icon" href="https://www.doyourownresear.ch/apple-touch-icon.png"> <!-- Replace with your icon URL -->
+
+    <!-- Social Media Links -->
+    <link rel="me" href="https://x.com/DYORLabz">
+    <link rel="me" href="https://www.youtube.com/@D.Y.O.R_Show">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Do Your Own Research Podcasts",
+    "url": "https://www.doyourownresear.ch/",
+    "description": "Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.",
+    "sameAs": [
+        "https://x.com/DYORLabz",
+        "https://www.youtube.com/@D.Y.O.R_Show"
+    ],
+    "logo": "https://www.doyourownresear.ch/logo.png",  <!-- Replace with your logo URL -->
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "support@doyourownresear.ch"
+    }
+    }
+    </script>
+    {{--  --}}
 </head>
 <body class="crypt-dark">
 
@@ -410,7 +468,7 @@
                     <h2 class="heading">Meet the host</h2>
                     <p class="crypt-grayscale-400 mt-3">
                        {{--  --}}
-                       Frank Hazard is a passionate podcast host and cryptocurrency advocate committed to educating and empowering his audience in the fast-paced world of digital finance. As the voice behind the renowned podcast Do Your Own Research (DYOR), Frank delivers insightful content designed to help listeners make informed decisions about blockchain technology, cryptocurrency investments, and decentralized finance (DeFi).
+                       Frank Hazard is a passionate podcast host and cryptocurrency advocate committed to educating and empowering his audience in the fast-paced world of digital finance. As the voice behind the renowned podcast Do Your Own Research Podcasts (DYOR), Frank delivers insightful content designed to help listeners make informed decisions about blockchain technology, cryptocurrency investments, and decentralized finance (DeFi).
                        <br><br>
                        With a deep understanding of the crypto space, Frank unpacks complex topics, spotlights emerging trends, and hosts conversations with industry pioneers and thought leaders. His engaging storytelling and straightforward approach have made DYOR a go-to resource for both seasoned investors and curious newcomers.
                        <br><br>

@@ -69,8 +69,8 @@
                  </div>
             </div>
              <!-- Copyright -->
-             <div class="text-center p-4 mt-4 crypt-footer-copyright">
-                Copyright © {{date('Y')}} - Powered by <a class="fw-bold link" href="https://designekta.com" rel="nofollow" target="_blank">Designekta Studios</a>
+             <div class="text-center p-4 mt-4 crypt-footer-copyright" style="color:#868e96; font-weight:600">
+                Copyright © {{date('Y')}} All Rights Reserved - Powered by <a style="color:#868e96; font-weight:600" class="fw-bold link" href="https://designekta.com" rel="nofollow" target="_blank">Designekta Studios</a>
             </div>
         </div>
 
