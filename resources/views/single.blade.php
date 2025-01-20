@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/button.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/gsap.css')}}">
-    <link rel="icon" type="image/svg" href="images/favicon.svg')}}">
+
 
     {{--  --}}
     @foreach ($Single as $single)
@@ -23,27 +23,27 @@
     <meta name="robots" content="index, follow">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.doyourownresear.ch/research/{{$single->slung}}" />
+    <link rel="canonical" href="{{url('/')}}/research/{{$single->slung}}" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{$single->title}} -  Do Your Own Research Podcasts">
     <meta property="og:description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
-    <meta property="og:url" content="https://www.doyourownresear.ch/research/{{$single->slung}}">
+    <meta property="og:url" content="{{url('/')}}/research/{{$single->slung}}">
     <meta property="og:site_name" content="{{$single->title}} -  Do Your Own Research Podcasts">
-    <meta property="og:image" content="https://www.doyourownresear.ch/og-image.jpg"> <!-- Replace with your image URL -->
+    <meta property="og:image" content="{{url('/')}}/og-image.jpg"> <!-- Replace with your image URL -->
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{$single->title}} -  Do Your Own Research Podcasts">
     <meta name="twitter:description" content="Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.">
-    <meta name="twitter:url" content="https://www.doyourownresear.ch/research/{{$single->slung}}">
-    <meta name="twitter:image" content="https://www.doyourownresear.ch/twitter-image.jpg"> <!-- Replace with your image URL -->
+    <meta name="twitter:url" content="{{url('/')}}/research/{{$single->slung}}">
+    <meta name="twitter:image" content="{{url('/')}}/twitter-image.jpg"> <!-- Replace with your image URL -->
     <meta name="twitter:creator" content="@DYORLabz">
 
     <!-- Favicons -->
-    <link rel="icon" href="https://www.doyourownresear.ch/favicon.ico" type="image/x-icon"> <!-- Replace with your favicon URL -->
-    <link rel="apple-touch-icon" href="https://www.doyourownresear.ch/apple-touch-icon.png"> <!-- Replace with your icon URL -->
+    <link rel="icon" href="{{url('/')}}/apple-touch-icon.png" type="image/x-icon"> <!-- Replace with your favicon URL -->
+    <link rel="apple-touch-icon" href="{{url('/')}}/apple-touch-icon.png"> <!-- Replace with your icon URL -->
 
     <!-- Social Media Links -->
     <link rel="me" href="https://x.com/DYORLabz">
@@ -55,13 +55,13 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "{{$single->title}} -  Do Your Own Research Podcasts",
-    "url": "https://www.doyourownresear.ch/research/{{$single->slung}}",
+    "url": "{{url('/')}}/research/{{$single->slung}}",
     "description": "Discover the latest top-notch stories from the worldwide community, quality informative podcasts, and verified creators.",
     "sameAs": [
         "https://x.com/DYORLabz",
         "https://www.youtube.com/@D.Y.O.R_Show"
     ],
-    "logo": "https://www.doyourownresear.ch/logo.png",  <!-- Replace with your logo URL -->
+    "logo": "{{url('/')}}/logo.png",  <!-- Replace with your logo URL -->
     "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Support",
