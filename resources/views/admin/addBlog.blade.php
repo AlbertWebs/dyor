@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="input-field col s4">
                                     <select required name="class" class="icons" >
-                                        <option value="" disabled selected>Choose Content Type</option>
+                                        <option value="" disabled selected>Choose Content Class</option>
                                         <option value="Guides"  class="circle">Guides</option>
                                         <option value="DeFi"  class="circle">DeFi</option>
                                         <option value="HowTos"  class="circle">How-Tos</option>
