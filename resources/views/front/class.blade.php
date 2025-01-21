@@ -30,7 +30,7 @@
             {{--  --}}
 
         <?php
-            $Pods = DB::table('blogs')->where('type','HowTos')->limit(5)->get();
+            $Pods = DB::table('blogs')->where('class','HowTos')->limit(5)->get();
          ?>
          {{--  --}}
          <div class="col-12 col-sm-12 col-md-12 col-lg-3 mb-4">
@@ -52,7 +52,7 @@
          {{--  --}}
 
          <?php
-            $Pods = DB::table('blogs')->where('type','Guides')->limit(5)->get();
+            $Pods = DB::table('blogs')->where('class','Guides')->limit(5)->get();
          ?>
          {{--  --}}
          <div class="col-12 col-sm-12 col-md-12 col-lg-3 mb-4">
@@ -74,7 +74,7 @@
          {{--  --}}
 
          <?php
-         $Pods = DB::table('blogs')->where('type','DeFi')->limit(5)->get();
+         $Pods = DB::table('blogs')->where('class','DeFi')->limit(5)->get();
       ?>
       {{--  --}}
       <div class="col-12 col-sm-12 col-md-12 col-lg-3 mb-4">
