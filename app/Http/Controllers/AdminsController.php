@@ -1357,6 +1357,7 @@ class AdminsController extends Controller
         $Counter = "";
         $blog = new Blog;
         $blog->title = $request->title;
+        $blog->class = $request->class;
         $blog->type = $request->type;
         $blog->whitepaper_link = $request->whitepaper_link;
         $blog->meta = $request->meta;

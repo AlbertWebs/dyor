@@ -69,7 +69,7 @@
 
                             {{--  --}}
                             <div class="row">
-                                <div class="input-field col s6">
+                                <div class="input-field col s4">
                                     <select required name="category" class="icons" id="mydiv">
                                         <option value="" disabled selected>Choose Topic</option>
                                         @foreach ($Category as $Categories)
@@ -78,7 +78,7 @@
                                     </select>
                                     {{-- <label>Choose Category</label> --}}
                                 </div>
-                                <div class="input-field col s6">
+                                <div class="input-field col s4">
                                     <select required name="type" class="icons" onchange="showDiv('hidden_div', this)">
                                         <option value="" disabled selected>Choose Content Type</option>
                                         <option value="Guides"  class="circle">Guides</option>
@@ -90,6 +90,16 @@
                                         <option value="Videos"  class="circle">Videos</option>
                                         <option value="Events"  class="circle">Events</option>
                                         <option value="Podcasts"  class="circle">Podcasts</option>
+                                    </select>
+                                    {{-- <label>Choose Content Type</label> --}}
+                                </div>
+                                <div class="input-field col s4">
+                                    <select required name="class" class="icons" >
+                                        <option value="" disabled selected>Choose Content Type</option>
+                                        <option value="Guides"  class="circle">Guides</option>
+                                        <option value="DeFi"  class="circle">DeFi</option>
+                                        <option value="HowTos"  class="circle">How-Tos</option>
+                                        <option value="Analysis"  class="circle">Analysis</option>
                                     </select>
                                     {{-- <label>Choose Content Type</label> --}}
                                 </div>

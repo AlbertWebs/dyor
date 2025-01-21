@@ -31,6 +31,8 @@ return new class extends Migration
             $table->text('content')->nullable();
             $table->string('author')->nullable();
             $table->string('category')->nullable();
+            $table->string('class')->nullable();
+
             $table->string('image')->nullable();
             $table->string('image_credit')->nullable();
             $table->string('image_one')->nullable();
