@@ -164,7 +164,7 @@
                     <a href="blog-single.html" class="blog-card">
 
                             <iframe class="yt-frames thumbs" id="player" type="text/html"
-                                src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                                src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
                                 frameborder="0">
                             </iframe>
 

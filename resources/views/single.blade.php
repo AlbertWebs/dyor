@@ -109,7 +109,7 @@
                         <h3 class="fw-bold">{{$single->title}}</h3>
                         @if($single->type == "Videos")
                             <iframe class="yt-frames" id="player" type="text/html"
-                                src="http://www.youtube.com/embed/{{$single->whitepaper_link}}"
+                                src="https://www.youtube.com/embed/{{$single->whitepaper_link}}"
                                 frameborder="0">
                             </iframe>
                         @else

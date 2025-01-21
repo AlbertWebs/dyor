@@ -94,7 +94,7 @@
                 <div class="col-12 col-md-4 mb-4">
                     <a href="{{url('/')}}/research/{{$trend->slung}}" class="blog-card">
                             <iframe class="yt-frame thumbs" type="text/html"
-                                src="http://www.youtube.com/embed/{{$trend->whitepaper_link}}"  frameborder="0">
+                                src="https://www.youtube.com/embed/{{$trend->whitepaper_link}}"  frameborder="0">
                             </iframe>
 
                         <div class="meta p-3">
@@ -327,7 +327,7 @@
                 <div class="col-12 col-md-4 mb-4">
                     <a href="{{url('/')}}/research/{{$single->slung}}" class="blog-card">
                             <iframe class="yt-frame thumbs" type="text/html"
-                                src="http://www.youtube.com/embed/{{$single->whitepaper_link}}"  frameborder="0">
+                                src="https://www.youtube.com/embed/{{$single->whitepaper_link}}"  frameborder="0">
                             </iframe>
 
                         <div class="meta p-3">

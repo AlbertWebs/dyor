@@ -165,7 +165,7 @@
                 <div class="col-12 col-md-4 mb-4">
                     <a href="{{url('/')}}/research/{{$single->slung}}" class="blog-card">
                             <iframe class="yt-frame thumbs" id="player" type="text/html"
-                                src="http://www.youtube.com/embed/{{$single->whitepaper_link}}"
+                                src="https://www.youtube.com/embed/{{$single->whitepaper_link}}"
                                 frameborder="0">
                             </iframe>
 
